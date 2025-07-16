@@ -1,0 +1,36 @@
+.homepage-container {
+  .video-background {
+    video {
+      width: 100vw;
+      position: fixed;
+      top: 0;
+    }
+    .homepage-content {
+    }
+  }
+  .homepage-content {
+    position: relative;
+    width: 45%;
+    padding-left: 120px;
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .title-header {
+      font-size: 45px;
+      font-weight: bold;
+    }
+    .title-body {
+      font-style: italic;
+    }
+    .title-footer {
+      font-size: 30px;
+      font-weight: 600;
+      button {
+        border-radius: 10px;
+        background-color: black;
+        cursor: pointer;
+      }
+    }
+  }
+}
