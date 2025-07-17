@@ -6,7 +6,6 @@ function App() {
     <div className="app-container">
       <div className="header-container">
         <Header />
-       
       </div>
       <div className="main-container">
         <div className="sidebar-container"></div>

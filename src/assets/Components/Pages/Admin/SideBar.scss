@@ -1,0 +1,29 @@
+.sidebar-container {
+  .footer {
+    margin-top: 300px;
+    padding-top: 50px;
+    border-top: 1px solid #7f8c8d;
+    .text-footer {
+      font-size: 14px;
+      color: #214b68;
+      border: 1px solid wheat;
+      border-radius: 5px;
+      background-color: #d2d9db;
+      padding: 5px;
+      position: fixed;
+      bottom: 0;
+      margin-left: 50px;
+      margin-bottom: 10px;
+    }
+    :hover {
+      background-color: #ecf0f1;
+      color: black;
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+  }
+}

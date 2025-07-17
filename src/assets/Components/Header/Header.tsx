@@ -1,7 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom'; // NavLink giúp active khi click vào thẻ
 import './Header.scss';
 const Header = () => {
@@ -23,11 +22,11 @@ const Header = () => {
               <i className="bi bi-house-door"> </i>
               Home
             </NavLink>
-            <NavLink className="nav-link col-1" to="user">
-              <i className="bi bi-people"> </i> User
-            </NavLink>
             <NavLink className="nav-link col-1" to="admin">
               <i className="bi bi-envelope"></i>Admin
+            </NavLink>
+            <NavLink className="nav-link col-1" to="user">
+              <i className="bi bi-people"> </i> User
             </NavLink>
             <NavLink className="nav-link col-1" to="gobal">
               <i className="bi bi-globe-europe-africa-fill"></i>Gobal
