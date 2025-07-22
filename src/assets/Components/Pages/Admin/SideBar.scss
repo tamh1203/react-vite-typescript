@@ -1,7 +1,12 @@
 .sidebar-container {
+  display: flex;
+  height: 100vh;
+  .toggle {
+    font-size: 25px;
+    padding-left: 10px;
+    color: #1331b6;
+  }
   .footer {
-    margin-top: 300px;
-    padding-top: 50px;
     border-top: 1px solid #7f8c8d;
     .text-footer {
       font-size: 14px;
@@ -16,14 +21,15 @@
       margin-bottom: 10px;
     }
     :hover {
-      background-color: #ecf0f1;
-      color: black;
+      background-color: #1f98b6;
+      color: rgb(190, 43, 43);
+      cursor: pointer;
     }
   }
 
-  .main-content {
-    flex: 1;
-    padding: 20px;
-    background-color: #ecf0f1;
-  }
+  // .main-content {
+  //   flex: 1;
+  //   padding: 20px;
+  //   background-color: #ecf0f1;
+  // }
 }

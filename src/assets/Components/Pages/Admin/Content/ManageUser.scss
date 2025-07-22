@@ -1,0 +1,55 @@
+.modal-create-account {
+  .img-preview {
+    border: 1px dashed #ccc;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #978989;
+  }
+  .img-upload {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 3px 10px;
+    cursor: pointer;
+    background-color: rgb(198, 195, 206);
+    border: none;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .modal-content {
+    width: 650px;
+  }
+}
+.manage-container {
+  .title-heading {
+    font-size: 50px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(30, 73, 73);
+  }
+  .users-content {
+    .btn-create-account {
+      button {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin: 10px;
+      }
+    }
+  }
+}

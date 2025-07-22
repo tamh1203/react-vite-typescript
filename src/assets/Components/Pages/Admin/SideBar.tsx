@@ -1,24 +1,37 @@
 import { useState } from 'react';
 import { Sidebar, Menu, MenuItem, SubMenu } from 'react-pro-sidebar';
-import { FaBars, FaHome, FaUser, FaCog, FaChartPie } from 'react-icons/fa';
+import { FaHome, FaUser, FaCog, FaChartPie } from 'react-icons/fa';
+import { IoIosMail } from 'react-icons/io';
+import { FaAffiliatetheme, FaToggleOff, FaToggleOn } from 'react-icons/fa6';
+import { HiDocumentReport } from 'react-icons/hi';
+import bg_sidebar from './../../../../../public/image/bg2.jpg';
+import { Link } from 'react-router-dom';
 import './SideBar.scss';
+
 const SideBar = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   return (
-    <div style={{ display: 'flex', height: '100vh' }}>
-      <Sidebar className="sidebar-container" collapsed={collapsed}>
+    <div className="sidebar-container">
+      <Sidebar image={bg_sidebar} collapsed={collapsed}>
         <Menu>
-          <MenuItem icon={<FaBars />} onClick={() => setCollapsed(!collapsed)}>
-            {!collapsed ? 'Thu gọn' : ''}
+          <MenuItem onClick={() => setCollapsed(!collapsed)}>
+            <span className="toggle">
+              {!collapsed ? <FaToggleOff /> : <FaToggleOn />}
+            </span>
           </MenuItem>
-          <MenuItem icon={<FaHome />}>Trang chủ</MenuItem>
-          <MenuItem icon={<FaChartPie />}>Thống kê</MenuItem>
-          <SubMenu icon={<FaUser />} label="Tài khoản">
-            <MenuItem>Thông tin</MenuItem>
-            <MenuItem>Cài đặt</MenuItem>
+          <MenuItem icon={<FaHome />} component={<Link to="/admin" />}>
+            Home
+          </MenuItem>
+          <MenuItem icon={<FaChartPie />}>Quantily</MenuItem>
+          <SubMenu icon={<FaUser />} label="Account">
+            <MenuItem component={<Link to="manage-user" />}>Manage</MenuItem>
+            <MenuItem>Settings</MenuItem>
           </SubMenu>
-          <MenuItem icon={<FaCog />}>Cấu hình</MenuItem>
+          <MenuItem icon={<IoIosMail />}>Gmail</MenuItem>
+          <MenuItem icon={<FaAffiliatetheme />}>Themes</MenuItem>
+          <MenuItem icon={<HiDocumentReport />}>Contact</MenuItem>
+          <MenuItem icon={<FaCog />}>Settings</MenuItem>
         </Menu>
         <div>
           {!collapsed && (
@@ -28,10 +41,6 @@ const SideBar = () => {
           )}
         </div>
       </Sidebar>
-
-      <main className="main-content">
-        <h1>Nội dung chính</h1>
-      </main>
     </div>
   );
 };

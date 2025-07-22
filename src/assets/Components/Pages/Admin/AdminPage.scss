@@ -3,11 +3,14 @@
   flex-direction: row;
 
   .admin-sidebar {
-    border: 1px solid black;
-    width: 50%;
   }
   .admin-content {
-    border: 1px solid rgb(197, 54, 54);
-    width: 50%;
+    width: 100%;
+    .content-dashboard {
+      border: 1px solid rgb(197, 54, 54);
+    }
+    .content-manager-user {
+      border: 1px solid blue;
+    }
   }
 }
